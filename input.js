@@ -1,6 +1,6 @@
-let connection;
+let connection; //undefined variable to be used later
 
-const setupInput = function (conn) {
+const setupInput = function (conn) { //setting up how our inputs are sent to the server
   connection = conn;
   const stdin = process.stdin;
   stdin.setRawMode(true);
@@ -11,7 +11,7 @@ const setupInput = function (conn) {
 };
 
 
-const handleUserInput = function (key) {
+const handleUserInput = function (key) { //defining all of our inputs by logging them to keys
   if (key === '\u0003' || key === "x") {
     process.exit();
   }
@@ -35,4 +35,4 @@ const handleUserInput = function (key) {
   }
 };
 
-module.exports = setupInput;
+module.exports = setupInput; //exporting the function to be used in another file
